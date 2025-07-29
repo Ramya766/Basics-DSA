@@ -1,0 +1,39 @@
+public class Main{
+    public static void main(String[] args){
+        int n=153;
+        int orginal=n;
+        int sum=0;
+        int len=String.valueOf(n).length(); //new 
+        while(n!=0){
+            int dig=n%10;
+            sum+=Math.pow(dig,len);
+            n=n/10;
+        }
+        if(sum==orginal){
+            System.out.print("Amstrong no");
+        }
+        else{
+            System.out.print("Not a amstrong no");
+        }
+    }
+}
+
+Input: n = 153
+
+Output: true
+
+Explanation: Number of digits : 3.
+
+13 + 53 + 33 = 1 + 125 + 27 = 153.
+
+Therefore, it is an Armstrong number.
+
+Input: n = 12
+
+Output: false
+
+Explanation: Number of digits : 2.
+
+12 + 22 = 1 + 4 = 5.
+
+Therefore, it is not an Armstrong number.
